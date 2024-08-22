@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flat Able - Premium Admin Template by Phoenixcoded</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/imagesnot/favicon.ico" type="image/x-icon">
+  
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="/assets/cssnot/style.css">
+    
+    <style>
+        .title {
+  font-family: "Impact";
+  font-size: 24px;
+  font-weight: 700;
+  color: #241c1c;
+  text-align: center;
+}
+        .menu-item,
+.menu-open-button {
+   background: #EEEEEE;
+   border-radius: 100%;
+   width: 80px;
+   height: 80px;
+   margin-left: -40px;
+   position: absolute;
+   color: #FFFFFF;
+   text-align: center;
+   line-height: 80px;
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+   -webkit-transition: -webkit-transform ease-out 200ms;
+   transition: -webkit-transform ease-out 200ms;
+   transition: transform ease-out 200ms;
+   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open {
+   display: none;
+}
+
+.lines {
+   width: 25px;
+   height: 3px;
+   background: #596778;
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -12.5px;
+   margin-top: -1.5px;
+   -webkit-transition: -webkit-transform 200ms;
+   transition: -webkit-transform 200ms;
+   transition: transform 200ms;
+   transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.line-1 {
+   -webkit-transform: translate3d(0, -8px, 0);
+   transform: translate3d(0, -8px, 0);
+}
+
+.line-2 {
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+
+.line-3 {
+   -webkit-transform: translate3d(0, 8px, 0);
+   transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .line-1 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+   transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .line-2 {
+   -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+   transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .line-3 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+   transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+   margin: auto;
+   position: relative;
+   top:20px;
+   bottom: 0;
+   left: 40%;
+   right: 0;
+   width: 80px;
+   height: 80px;
+   text-align: center;
+   box-sizing: border-box;
+   font-size: 26px;
+}
+
+
+/* .menu-item {
+   transition: all 0.1s ease 0s;
+} */
+
+.menu-item:hover {
+   background: #EEEEEE;
+   color: #3290B1;
+}
+
+.menu-item:nth-child(3) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(4) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(5) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(6) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(7) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(8) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-item:nth-child(9) {
+   -webkit-transition-duration: 180ms;
+   transition-duration: 180ms;
+}
+
+.menu-open-button {
+   z-index: 2;
+   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   -webkit-transition-duration: 400ms;
+   transition-duration: 400ms;
+   -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+   transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+   cursor: pointer;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+}
+
+.menu-open-button:hover {
+   -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+   -webkit-transition-timing-function: linear;
+   transition-timing-function: linear;
+   -webkit-transition-duration: 200ms;
+   transition-duration: 200ms;
+   -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+   -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+   transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+   transition-duration: 180ms;
+   -webkit-transition-duration: 180ms;
+   -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+   transform: translate3d(0.08361px, -104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(4) {
+   transition-duration: 280ms;
+   -webkit-transition-duration: 280ms;
+   -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+   transform: translate3d(90.9466px, -52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(5) {
+   transition-duration: 380ms;
+   -webkit-transition-duration: 380ms;
+   -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+   transform: translate3d(90.9466px, 52.47586px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(6) {
+   transition-duration: 480ms;
+   -webkit-transition-duration: 480ms;
+   -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+   transform: translate3d(0.08361px, 104.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(7) {
+   transition-duration: 580ms;
+   -webkit-transition-duration: 580ms;
+   -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+   transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(8) {
+   transition-duration: 680ms;
+   -webkit-transition-duration: 680ms;
+   -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+   transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(9) {
+   transition-duration: 780ms;
+   -webkit-transition-duration: 780ms;
+   -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+   transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+.blue {
+   background-color: #669AE1;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.blue:hover {
+   color: #669AE1;
+   text-shadow: none;
+}
+
+.green {
+   background-color: #70CC72;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.green:hover {
+   color: #70CC72;
+   text-shadow: none;
+}
+
+.red {
+   background-color: #FE4365;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.red:hover {
+   color: #FE4365;
+   text-shadow: none;
+}
+
+.purple {
+   background-color: #C49CDE;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.purple:hover {
+   color: #C49CDE;
+   text-shadow: none;
+}
+
+.orange {
+   background-color: #FC913A;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.orange:hover {
+   color: #FC913A;
+   text-shadow: none;
+}
+
+.lightblue {
+   background-color: #62C2E4;
+   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.lightblue:hover {
+   color: #62C2E4;
+   text-shadow: none;
+}
+
+
+
+header {
+    --bg: #1d3557;
+  --c1: #457b9d;
+  --c2: #fff;
+  --c3: #a8dadc;
+  height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg);
+}
+
+@keyframes showBars {
+  0% { opacity: 0; background-position: -400% 7%, 500% 21%, -400% 35%, 500% 49%, -400% 63%, 500% 77%, -400% 91% ; }
+  14% { background-position: 0% 7%, 500% 21%, -400% 35%, 500% 49%, -400% 63%, 500% 77%, -400% 91% ; }
+  28% { background-position: 0% 7%, 100% 21%, -400% 35%, 500% 49%, -400% 63%, 500% 77%, -400% 91% ; }
+  42% { background-position: 0% 7%, 100% 21%,    0% 35%, 500% 49%, -400% 63%, 500% 77%, -400% 91% ; }
+  56% { background-position: 0% 7%, 100% 21%,    0% 35%, 100% 49%, -400% 63%, 500% 77%, -400% 91% ; }
+  70% { background-position: 0% 7%, 100% 21%,    0% 35%, 100% 49%,    0% 63%, 500% 77%, -400% 91% ; }
+  84% { background-position: 0% 7%, 100% 21%,    0% 35%, 100% 49%,    0% 63%, 100% 77%, -400% 91% ; }
+  98%, 100% { opacity: 1; background-position: 0% 7%, 100% 21%, 0% 35%, 100% 49%, 0% 63%, 100% 77%, 0% 91%; }
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-size: 70% 7%;
+  background-image:
+    linear-gradient(var(--c1),var(--c1)),
+    linear-gradient(var(--c2),var(--c2)),
+    linear-gradient(var(--c1),var(--c1)),
+    linear-gradient(var(--c2),var(--c2)),
+    linear-gradient(var(--c1),var(--c1)),
+    linear-gradient(var(--c2),var(--c2)),
+    linear-gradient(var(--c1),var(--c1));
+  background-position: 0% 7%, 100% 21%, 0% 35%, 100% 49%, 0% 63%, 100% 77%, 0% 91%;
+  animation: showBars 3.5s;
+}
+
+@keyframes showText {
+  0% { opacity: 0; transform: translate(0, -100%); }
+  20% { opacity: 0; }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+header > .cabecera {
+  position: relative;
+  transform: translate(-100%, 0);
+  opacity: 0;
+  animation: showText 2s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3.5s;
+  text-align: center;
+}
+
+.cabecera h1 {
+  font-weight: 400;
+  font-family: Oswald, Montserrat, arial, sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: var(--c2);
+}
+
+.cabecera p {
+  color: var(--c3);
+  margin: 0;
+  font-size: 5vw;
+  margin-bottom: 5vh;
+}
+
+@media all and (min-width: 768px) {
+
+  @keyframes showBarsBig {
+    0% { opacity: 0; background-position: 7% -400%, 21% 500%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%; }
+    14% { background-position: 7% 0%, 21% 500%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%; }
+    28% { background-position: 7% 0%, 21% 100%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%; }
+    42% { background-position: 7% 0%, 21% 100%, 35% 0%, 49% 500%, 63% -400%, 77% 500%, 91% -400%; }
+    56% { background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% -400%, 77% 500%, 91% -400%; }
+    70% { background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 500%, 91% -400%; }
+    84% { background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% -400%; }
+    98%, 100% { opacity: 1; background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% 0%; }
+  }
+
+  @keyframes showTextBig {
+    0% { opacity: 0; transform: translate(-100%, 0); }
+    20% { opacity: 0; }
+    100% { opacity: 1; transform: translate(0vw, 0); }
+  }
+
+  header {
+    height: 50vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  header::after {
+    width: 20vw;
+    height: 100%;
+    background-size: 7% 70%;
+    background-position: 
+      7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% 0%;
+    animation-name: showBarsBig;
+  }
+
+  header > .cabecera {
+    animation-name: showTextBig;
+    margin-left: 22vw;
+    text-align: left;
+  }
+
+  .cabecera h1 {
+    font-size: 8vw;
+  }
+
+  .cabecera p {
+    font-size: 4vw;
+    margin-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  header::after {
+    animation: none !important;
+  }
+  
+  @keyframes showTextReduced {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+  header > .cabecera {
+    transform: translate(0,0);
+    animation-name: showTextReduced;
+    animation-delay: 0.5s !important;
+  }
+}
+    </style>
+
+</head>
+<body class="">
+
+<header>
+  <div class="cabecera">
+    <h1>Centro de Notificaciones</h1>
+    <p>ParkVision</p>
+  </div>
+  <nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+    <label class="menu-open-button" for="menu-open">
+     <span class="lines line-1"></span>
+     <span class="lines line-2"></span>
+     <span class="lines line-3"></span>
+   </label>
+ 
+    <a routerLink="/menu" class="menu-item blue"> <i class="fa fa-home"></i> </a>
+    <a href="/perfil/perfil" class="menu-item green"> <i class="far fa-file"></i> </a>
+    <a href="/solic" class="menu-item red"> <i class="fas fa-video"></i> </a>
+    <a href="/sitio" class="menu-item purple"> <i class="far fa-sticky-note"></i> </a>
+    <a href="/contact" class="menu-item orange"> <i class="far fa-id-badge"></i> </a>
+    <a href="/notif" class="menu-item lightblue"> <i class="far fa-address-card"></i> </a>
+ </nav>
+</header>
+
+
+<br>
+<br>
+
+<br><br><br><br>
+<br>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- table card-1 start -->
+            <div class="col-md-12 col-xl-4">
+                <div class="card flat-card">
+                    <div class="row-table">
+                        <div class="col-sm-6 card-body br">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-eye text-c-green mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>10k</h5>
+                                    <span>Visitantes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-music text-c-red mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>100%</h5>
+                                    <span>Volumen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-table">
+                        <div class="col-sm-6 card-body br">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-file-alt text-c-blue mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>2000 +</h5>
+                                    <span>Archivos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-envelope text-c-yellow mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>120</h5>
+                                    <span>Correos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget primary card start -->
+                <div class="card flat-card widget-primary-card">
+                    <div class="row-table">
+                        <div class="col-sm-3 card-body">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>4000 +</h4>
+                            <h6>Visitas a la página</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget primary card end -->
+            </div>
+            <!-- table card-1 end -->
+            <!-- table card-2 start -->
+            <div class="col-md-12 col-xl-4">
+                <div class="card flat-card">
+                    <div class="row-table">
+                        <div class="col-sm-6 card-body br">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-share-alt text-c-blue mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>1000</h5>
+                                    <span>Visitantes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-wifi text-c-blue mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>600</h5>
+                                    <span>RED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-table">
+                        <div class="col-sm-6 card-body br">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-redo text-c-blue mb-1 d-block"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>3550</h5>
+                                    <span>Red</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fas fa-shopping-cart text-c-blue mb-1 d-blockz"></i>
+                                </div>
+                                <div class="col-sm-8 text-md-center">
+                                    <h5>100%</h5>
+                                    <span>Orden</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget-success-card start -->
+                <div class="card flat-card widget-purple-card">
+                    <div class="row-table">
+                        <div class="col-sm-3 card-body">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4>17</h4>
+                            <h6>Espacios</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget-success-card end -->
+            </div>
+            <!-- table card-2 end -->
+            <!-- Widget primary-success card start -->
+            <div class="col-md-12 col-xl-4">
+                <div class="card support-bar overflow-hidden">
+                    <div class="card-body pb-0">
+                        <h2 class="m-0">350</h2>
+                        <span class="text-c-blue">Solicitudes de Soporte</span>
+                        <p class="mb-3 mt-3">Número total de solicitudes de soporte técnico que llegan.</p>
+                    </div>
+                    <div id="support-chart"></div>
+                    <div class="card-footer bg-primary text-white">
+                        <div class="row text-center">
+                            <div class="col">
+                                <h4 class="m-0 text-white">10</h4>
+                                <span>Abiertos</span>
+                            </div>
+                            <div class="col">
+                                <h4 class="m-0 text-white">5</h4>
+                                <span>En proceso</span>
+                            </div>
+                            <div class="col">
+                                <h4 class="m-0 text-white">3</h4>
+                                <span>-Resolvidos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Widget primary-success card end -->
+
+            <!-- prject ,team member start -->
+            <div class="col-xl-6 col-md-12">
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h5>Projects</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+                                            Visitante
+                                        </th>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th class="text-right">Prioridad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Cesar Glez</h6>
+                                                    <p class="text-muted m-b-0">Visitante</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>César</td>
+                                        <td>Jun, 26</td>
+                                        <td class="text-right"><label class="badge badge-light-danger">Alto</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Gil</h6>
+                                                    <p class="text-muted m-b-0">Desarrollador Web</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Gilberto</td>
+                                        <td>March, 31</td>
+                                        <td class="text-right"><label class="badge badge-light-primary">Alto</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Emma</h6>
+                                                    <p class="text-muted m-b-0">Programador</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Emmanuel</td>
+                                        <td>Aug, 02</td>
+                                        <td class="text-right"><label class="badge badge-light-success">medio</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>CesarGlez</h6>
+                                                    <p class="text-muted m-b-0">Programador</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Fernando</td>
+                                        <td>Sep, 22</td>
+                                        <td class="text-right"><label class="badge badge-light-primary">Alto</label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-12">
+                <div class="card latest-update-card">
+                    <div class="card-header">
+                        <h5>Últimas actualizaciones</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="latest-update-box">
+                            <div class="row p-t-30 p-b-30">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">2 hrs ago</p>
+                                    <i class="fab fa-twitter bg-twitter update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+ 1652 Followers</h6>
+                                    </a>
+                                    <p class="text-muted m-b-0">Cada vez tienes más visitantes, ¡sigue así!</p>
+                                </div>
+                            </div>
+                            <div class="row p-b-30">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">4 hrs ago</p>
+                                    <i class="fas fa-briefcase bg-c-red update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+ 5 Nuevas Reservas!</h6>
+                                    </a>
+                                    <p class="text-muted m-b-0">Congratulations!</p>
+                                </div>
+                            </div>
+                            <div class="row p-b-0">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">2 day ago</p>
+                                    <i class="fab fa-facebook-f bg-facebook update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+1 Amigo Registrado</h6>
+                                    </a>
+                                    <p class="text-muted m-b-10">¡Esto es genial, sigue así!</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <td class="b-none">
+                                                    <a href="#!" class="align-middle">
+                                                        <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>CesarGlez</h6>
+                                                            <p class="text-muted m-b-0">Programador</p>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#!" class="b-b-primary text-primary">Ver todo el sitio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- prject ,team member start -->
+  
+            <div class="col-lg-8 col-md-12">
+                <div class="card table-card review-card">
+                    <div class="card-header borderless ">
+                        <h5>Opiniones de los usuarios</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="fas fa-expand-arrows-alt"></i> maximize</span><span style="display:none"><i class="fas fa-compress-alt"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="fas fa-minus"></i> collapse</span><span style="display:none"><i class="fas fa-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="fas fa-sync-alt"></i> reload</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="fas fa-trash-alt"></i> remove</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pb-0">
+                        <div class="review-block">
+                            <div class="row">
+                                <div class="col-sm-auto p-r-0">
+                                    <img src="assets/images/autor.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+                                </div>
+                                <div class="col">
+                                    <h6 class="m-b-15">CesarGlez<span class="float-right f-13 text-muted"> a week ago</span></h6>
+                                    <a href="#!"><i class="fas fa-star f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="fas fa-star f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="fas fa-star f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    
+                                    <p class="m-t-15 m-b-15 text-muted">Mensaje del Usuario</p>
+                                    <a href="#!" class="m-r-30 text-muted"><i class="far fa-thumbs-up m-r-15"></i>Ayuda?</a>
+<a href="#!"><i class="fas fa-heart text-c-red m-r-15"></i></a>
+<a href="#!"><i class="fas fa-edit text-muted"></i></a>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-auto p-r-0">
+                                    <img src="assets/images/autor.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+                                </div>
+                                <div class="col">
+                                    <h6 class="m-b-15">Gil Correa<span class="float-right f-13 text-muted"> a week ago</span></h6>
+                                    <a href="#!"><i class="fas fa-star f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="far fa-star f-18 text-muted"></i></a>
+                                    
+                                    <p class="m-t-15 m-b-15 text-muted">Mensaje del Usuario</p>
+                                    <a href="#!" class="m-r-30 text-muted"><i class="far fa-thumbs-up m-r-15"></i>Ayuda?</a>
+<a href="#!"><i class="fas fa-heart text-c-red m-r-15"></i></a>
+<a href="#!"><i class="fas fa-edit text-muted"></i></a>
+                                    <blockquote class="blockquote m-t-15 m-b-0">
+                                        <h6>Cesar Glez</h6>
+                                        <p class="m-b-0 text-muted">Mensaje del Usuario</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card chat-card">
+                    <div class="card-header">
+                        <h5>Chat</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximizar</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> colapsar</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reiniciar</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remover</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row m-b-20 received-chat">
+                            <div class="col-auto p-r-0">
+                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40">
+                            </div>
+                            <div class="col">
+                                <div class="msg">
+                                    <p class="m-b-0">Mensaje Ingresado!</p>
+                                </div>
+                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
+                            </div>
+                        </div>
+                        <div class="row m-b-20 send-chat">
+                            <div class="col">
+                                <div class="msg">
+                                    <p class="m-b-0">Mensaje Ingresado!</p>
+                                </div>
+                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
+                            </div>
+                            <div class="col-auto p-l-0">
+                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40">
+                            </div>
+                        </div>
+                        <div class="row m-b-20 received-chat">
+                            <div class="col-auto p-r-0">
+                                <img src="assets/images/autor.jpg" alt="user image" class="img-radius wid-40">
+                            </div>
+                            <div class="col">
+                                <div class="msg">
+                                    <p class="m-b-0">Nice to meet you!</p>
+                                    <img src="/assets/imagesnot/widget/dashborad-1.jpg" alt="">
+                                    <img src="/assets/imagesnot/widget/dashborad-3.jpg" alt="">
+                                </div>
+                                <p class="text-muted m-b-0"><i class="fa fa-clock-o m-r-10"></i>10:20am</p>
+                            </div>
+                        </div>
+                        <div class="input-group m-t-15">
+                            <input type="text" name="task-insert" class="form-control" id="Project" placeholder="Send message">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plane"></i>
+
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div></div>
+<!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="assets/jsnot/vendor-all.min.js"></script>
+    <script src="assets/jsnot/plugins/bootstrap.min.js"></script>
+    <script src="assets/jsnot/pcoded.min.js"></script>
+
+<!-- Apex Chart -->
+<script src="assets/jsnot/plugins/apexcharts.min.js"></script>
+
+
+<!-- custom-chart js -->
+<script src="assets/jsnot/pages/dashboard-main.js"></script>
+</body>
+
+</html>
